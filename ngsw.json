@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1640886624180,
+  "timestamp": 1640892500688,
   "index": "/gps-tracker-wpa/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,8 @@
       "urls": [
         "/gps-tracker-wpa/favicon.ico",
         "/gps-tracker-wpa/index.html",
-        "/gps-tracker-wpa/main.cd356700e7d7a7a3.js",
+        "/gps-tracker-wpa/main.38eb60dff5eccdc2.js",
+        "/gps-tracker-wpa/main.9294a8789084a95d.css",
         "/gps-tracker-wpa/manifest.webmanifest",
         "/gps-tracker-wpa/polyfills.cecd56adb3a65fc1.js",
         "/gps-tracker-wpa/runtime.72bd118e44a5e3b4.js",
@@ -52,8 +53,9 @@
     "/gps-tracker-wpa/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/gps-tracker-wpa/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/gps-tracker-wpa/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/gps-tracker-wpa/index.html": "11605c0a776f7f9c6fe970d3678a94ccffd00716",
-    "/gps-tracker-wpa/main.cd356700e7d7a7a3.js": "0188d57f1f576ee0fb5c5186e3028444cdb4ae65",
+    "/gps-tracker-wpa/index.html": "654c3d2136396a2d361645feee5261ae77e22e95",
+    "/gps-tracker-wpa/main.38eb60dff5eccdc2.js": "1868d3ee8edf19b75a5509f2a97ded44785f1794",
+    "/gps-tracker-wpa/main.9294a8789084a95d.css": "1a2d99d5ba228f552d97b578abd93d058080f2ce",
     "/gps-tracker-wpa/manifest.webmanifest": "69ea0bae8fa9180c74875d6b798a540060a9e7c1",
     "/gps-tracker-wpa/polyfills.cecd56adb3a65fc1.js": "c84a8889fbe5863df82494ea264894c012c15bdb",
     "/gps-tracker-wpa/runtime.72bd118e44a5e3b4.js": "ec39fd3f0a9ab5ac7e039934bf62bfc01001cf7d",
