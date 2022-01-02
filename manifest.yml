@@ -19,7 +19,6 @@ spec:
         backend:
           serviceName: gps-tracker-wpa
           servicePort: 80
-
 ---
 apiVersion: v1
 kind: Service
@@ -35,30 +34,29 @@ spec:
     targetPort: 80
   selector:
     app: gps-tracker-wpa
-
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    run: gps-tracker-wpa
   name: gps-tracker-wpa
-  namespace: frontend
+  labels:
+    app: gps-tracker-wpa
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      run: gps-tracker-wpa
+      app: gps-tracker-wpa
   template:
     metadata:
       labels:
-        run: gps-tracker-wpa
+        app: gps-tracker-wpa
+    spec:
       containers:
-      - image: gcr.io/hanan-qucha-grau/gps-tracker-wpa:1
-         name: gps-tracker-wpa
-         ports:
-          - containerPort: 80
-         resources:
+      - name: gps-tracker-wpa
+        image: gcr.io/hanan-qucha-grau/gps-tracker-wpa:1
+        ports:
+        - containerPort: 80
+        resources:
           limits:
             memory: "128Mi"
           requests:
