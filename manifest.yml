@@ -53,7 +53,7 @@ spec:
     spec:
       containers:
       - name: gps-tracker-wpa
-        image: gcr.io/hanan-qucha-grau/gps-tracker-wpa:1
+        image: gcr.io/hanan-qucha-grau/gps-tracker-wpa:2
         ports:
         - containerPort: 80
         resources:

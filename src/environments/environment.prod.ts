@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api:"http://localhost:4200/data"
+  api:`${window.location.protocol}://${window.location.hostname}/api/tracker`
 };
