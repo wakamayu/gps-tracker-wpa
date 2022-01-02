@@ -1,0 +1,67 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: kong
+    konghq.com/strip-path: "true"
+  labels:
+    chart: gps-tracker-wpa
+  name: gps-tracker-wpa
+  namespace: frontend
+spec:
+  rules:
+  - host: gps.tracker.wpa
+    http:
+      paths:
+      - path: /ingress/web/tracker-wpa/
+        pathType: Prefix
+        backend:
+          serviceName: gps-tracker-wpa 
+          servicePort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: gps-tracker-wpa
+  name: gps-tracker-wpa
+  namespace: frontend
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: gps-tracker-wpa
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: gps-tracker-wpa
+  name: gps-tracker-wpa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gps-tracker-wpa 
+  template:
+    metadata:
+      labels:
+        run: gps-tracker-wpa
+    spec:
+        imagePullSecrets:
+        - name: regcred
+        containers:
+        - image: gcr.io/hanan-qucha-grau/gps-tracker-wpa:1
+          name: gps-tracker-wpa
+          ports:
+          - containerPort: 80
+          resources:
+            limits:
+                memory: "128Mi"
+            requests:
+                memory: "100Mi"
