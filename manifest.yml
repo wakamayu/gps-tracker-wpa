@@ -41,25 +41,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: gps-tracker-wpa
+    run: gps-tracker-wpa
   name: gps-tracker-wpa
+  namespace: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gps-tracker-wpa 
-#  template:
-#    metadata:
-#      labels:
-#        run: gps-tracker-wpa
-    spec:
-        containers:
-        - image: gcr.io/hanan-qucha-grau/gps-tracker-wpa:1
-          name: gps-tracker-wpa
-          ports:
+      run: gps-tracker-wpa
+  template:
+    metadata:
+      labels:
+        run: gps-tracker-wpa
+      containers:
+      - image: gcr.io/hanan-qucha-grau/gps-tracker-wpa:1
+         name: gps-tracker-wpa
+         ports:
           - containerPort: 80
-          resources:
-            limits:
-                memory: "128Mi"
-            requests:
-                memory: "100Mi"
+         resources:
+          limits:
+            memory: "128Mi"
+          requests:
+            memory: "100Mi"
