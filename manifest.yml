@@ -17,7 +17,7 @@ spec:
       - path: /ingress/web/tracker-wpa/
         pathType: Prefix
         backend:
-          serviceName: gps-tracker-wpa 
+          serviceName: gps-tracker-wpa
           servicePort: 80
 
 ---
