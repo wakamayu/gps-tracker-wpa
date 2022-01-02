@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Viaje</h2>
+<mat-dialog-content class="mat-typography">
+    <form>
+        <mat-form-field class="form-control form-control-sm border-0" appearance="fill">
+            <mat-label floatLabel="outline">Numero de viaje</mat-label>
+            <input matInput [(ngModel)]="trip.id" name="id" placeholder="Identificador de viaje">
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <!--
+    <button mat-button class="btn btn-outline-secondary" mat-dialog-close>Cancelar</button>
+    -->
+    <button mat-button class="btn  btn-outline-primary" (click)="aceppted()" cdkFocusInitial>Aceptar</button>
+</mat-dialog-actions>

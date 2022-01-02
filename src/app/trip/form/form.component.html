@@ -1,0 +1,46 @@
+<div class="container overflow-auto padding-bottom-5">
+    <h2 class="display-4">Registrar viaje</h2>
+    <h1> {{tripModel.id}} </h1>
+    <hr class="my-4">
+    <form>
+        <mat-form-field  class="form-control  form-control-sm border-0" appearance="fill">
+            <mat-label>Fecha de viaje</mat-label>
+            <input matInput *ngIf="updateDate"  [(ngModel)]="tripModel.travelDate" name="travelDate" [matDatepicker]="picker">
+            <input matInput *ngIf="!updateDate"[(ngModel)]="tripModel.travelDate" name="travelDate" placeholder="">
+        
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="form-control  form-control-sm border-0" appearance="fill">
+            <mat-label floatLabel="outline">Punto de partida</mat-label>
+            <input matInput [(ngModel)]="tripModel.point" name="point" placeholder="Capacidad del vehiculo">
+        </mat-form-field>
+        <mat-form-field class="form-control form-control-sm border-0" appearance="fill">
+            <mat-label floatLabel="outline">Punto de llegada</mat-label>
+            <input matInput [(ngModel)]="tripModel.arrivalPoint" name="arrivalPoint" placeholder="Color del vehiculo">
+        </mat-form-field>
+        <mat-form-field class="form-control form-control-sm border-0" appearance="fill">
+            <mat-label>Seleccionar vehiculo</mat-label>
+            <mat-select [(ngModel)]="tripModel.idVehicle.id" name="id">
+                <mat-option *ngFor="let item of vehicleList" [value]="item.id">
+                    {{item.vehicleBrand}} {{item.vehicleModel}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+
+    <ul class="list-group ">
+        <li *ngFor="let item of referralGuideList" class="list-group-item">
+            <div class="card">
+                <div class="card-body">
+                    <span class="badge rounded-pill  bg-secondary">{{item.numberGuide}}</span>
+                    <span class="badge rounded-pill  bg-primary">{{item.addressee}}</span>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item  text-center border-0">
+            <button type="button" mat-button (click)="openDialog()"
+                class=" btn rounded-circle btn-outline-primary">+</button>
+        </li>
+    </ul>
+</div>

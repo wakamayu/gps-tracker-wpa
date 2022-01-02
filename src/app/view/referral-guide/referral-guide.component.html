@@ -1,0 +1,35 @@
+<div class="container">
+    <h2 class="display-4">Buscar Guias</h2>
+    <hr class="my-4">
+    <form>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-sm" [(ngModel)]="referralGuide.numberGuide"
+                name="numberGuide">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button" (click)="search()" data-toggle="dropdown"
+                    aria-expanded="false">Buscar</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">Fecha de viaje</div>
+            <div class="col-9">{{ referralGuide.idTrip.travelDate }}</div>
+        </div>
+        <div class="row">
+            <div class="col-3">Punto de partida</div>
+            <div class="col-9"> {{ referralGuide.idTrip.point }}</div>
+        </div>
+        <div class="row">
+            <div class="col-3">Punto de llegada</div>
+            <div class="col-9">{{ referralGuide.idTrip.arrivalPoint }}</div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">Vehiculo</div>
+            <div class="col-9"> {{ referralGuide.idTrip.idVehicle.plateNumber }} {{
+                referralGuide.idTrip.idVehicle.vehicleBrand }} {{
+                referralGuide.idTrip.idVehicle.vehicleModel }}</div>
+        </div>
+    </form>
+
+</div>
+<div id="search-map" class="map-container"></div>

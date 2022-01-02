@@ -1,0 +1,21 @@
+<div class="container border-0">
+    <ul class="list-group border-0">
+        <li *ngFor="let item of tripList" class="list-group-item border-0">
+            <div class="card">
+                <div class="card-body"  routerLink="/trip/form/{{ item.id }}">
+                    <h5 class="card-title"> Identificado de viaje {{ item.id }} </h5>
+                    <p class="card-text"> Punto de partida: {{ item.point }} </p>
+                    <p class="card-text"> Punto de salida: {{ item.arrivalPoint }} </p>
+                    <p class="card-text"> Fecha de viaje: {{ item.travelDate }} </p>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item border-0">
+            <div class="card text-center .border-dotted">
+                <div class="card-body">
+                    <a href="#"  routerLink="/trip/form" class="btn btn-outline-primary">+</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

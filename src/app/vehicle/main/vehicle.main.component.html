@@ -1,0 +1,21 @@
+<div class="container border-0">
+    <ul class="list-group border-0">
+        <li *ngFor="let item of vehicleList" class="list-group-item border-0">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ item.vehicleBrand}} {{ item.plateNumber}} </h5>
+                    <p class="card-text"> Color: {{ item.color }} </p>
+                    <p class="card-text"> Capacidad: {{ item.capacity }} </p>
+                    <p class="card-text"> A&ntilde;o: {{ item.vehicleModel }} </p>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item border-0">
+            <div class="card text-center .border-dotted">
+                <div class="card-body">
+                    <a href="#"  routerLink="/vehicle/form" class="btn btn-outline-primary">Nuevo</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

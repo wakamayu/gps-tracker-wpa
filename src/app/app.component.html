@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="jumbotron mt-3">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="fixed-bottom navbar-dark bg-dark">
+    <ul class="row nav">
+      <li class="col nav-item text-center">
+        <a class="nav-link active" routerLink="/vehicle/main" href="#">
+          <p>
+            <span class="material-icons">
+              departure_board
+            </span>
+          </p>
+          Vehiculo
+        </a>
+      </li>
+      <li class="col nav-item text-center">
+        <a class="nav-link" routerLink="/trip/main" href="#">
+          <p>
+            <span class="material-icons">
+              calendar_month
+            </span>
+          </p>
+          Programar viaje
+        </a>
+      </li>
+      <li class="col nav-item text-center">
+        <a class="nav-link" routerLink="/routes/main" href="#">
+          <p>
+            <span class="material-icons">
+              local_shipping
+            </span>
+          </p>
+          Rutas
+        </a>
+      </li>
+      <!--
+      <li class="col-3 nav-item text-center">
+        <a class="nav-link" routerLink="/view/main" href="#">
+          <p>
+            <span class="material-icons">
+              search
+            </span>
+          </p>
+          Busqueda
+        </a>
+      </li>
+      -->
+    </ul>
+  </div>
+</div>

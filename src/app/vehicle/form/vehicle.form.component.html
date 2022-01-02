@@ -1,0 +1,30 @@
+<div class="container">
+  <h2 class="display-4">Registrar vehiculo</h2>
+  <hr class="my-4">
+  <form>
+    <mat-form-field class="form-control form-control-sm border-0" appearance="fill">
+      <mat-label floatLabel="outline">Placa</mat-label>
+      <input matInput [(ngModel)]="vehicleModel.plateNumber" name="plateNumber" placeholder="Numero de placa">
+    </mat-form-field>
+    <mat-form-field class="form-control  form-control-sm border-0" appearance="fill">
+      <mat-label floatLabel="outline">Capacidad</mat-label>
+      <input matInput [(ngModel)]="vehicleModel.capacity" name="capacity" placeholder="Capacidad del vehiculo">
+    </mat-form-field>
+    <mat-form-field class="form-control form-control-sm border-0" appearance="fill">
+      <mat-label floatLabel="outline">Color</mat-label>
+      <input matInput [(ngModel)]="vehicleModel.color" name="color" placeholder="Color del vehiculo">
+    </mat-form-field>
+    <mat-form-field class="form-control form-control-sm border-0" appearance="fill">
+      <mat-label floatLabel="outline">Marca</mat-label>
+      <input matInput [(ngModel)]="vehicleModel.vehicleBrand" name="vehicleBrand" placeholder="Color del vehiculo">
+    </mat-form-field>
+    <mat-form-field class="form-control form-control-sm border-0" appearance="fill">
+      <mat-label floatLabel="outline">A&ntilde;o</mat-label>
+      <input matInput [(ngModel)]="vehicleModel.vehicleModel" name="vehicleModel" placeholder="Año del vehiculo">
+    </mat-form-field>
+  </form>
+  <hr class="my-4">
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" (click)="save()" class="btn btn-outline-primary">Guardar</button>
+  </div>
+</div>

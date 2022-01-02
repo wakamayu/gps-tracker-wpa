@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-3">Fecha de viaje</div>
+    <div class="col-9">{{ trip.travelDate }}</div>
+</div>
+<div class="row">
+    <div class="col-3">Punto de partida</div>
+    <div class="col-9"> {{ trip.point }}</div>
+</div>
+<div class="row">
+    <div class="col-3">Punto de llegada</div>
+    <div class="col-9">{{ trip.arrivalPoint }}</div>
+</div>
+
+<div class="row">
+    <div class="col-3">Vehiculo</div>
+    <div class="col-9"> {{ trip.idVehicle.plateNumber }} {{ trip.idVehicle.vehicleBrand }} {{
+        trip.idVehicle.vehicleModel }}</div>
+</div>
+
+<div class="row">
+    <div class="col">Coordenadas</div>
+    <div class="col">Latitud {{ coordinates[0] }}</div>
+    <div class="col">Longitud {{ coordinates[1] }}</div>
+    <div class="col">Transmision por minuto {{ countMinute }}</div>
+</div>
+
+<div id="ol-map" class="map-container"></div>
+
+<div class="btn-group btn-group-lg" role="group">
+    <button type="button" *ngIf="!checkButton" class="btn btn-danger" (click)="stop()">Detener</button>
+    <button type="button" *ngIf="checkButton" class="btn btn-primary" (click)="start()">Transmitir</button>
+</div>

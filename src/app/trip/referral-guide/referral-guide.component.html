@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Guia</h2>
+<mat-dialog-content class="mat-typography">
+    <form>
+        <mat-form-field class="form-control form-control-sm border-0" appearance="fill">
+            <mat-label floatLabel="outline">Numero de guia</mat-label>
+            <input matInput [(ngModel)]="referralGuideModel.numberGuide" name="numberGuide"
+                placeholder="Numero de guia">
+        </mat-form-field>
+        <mat-form-field class="form-control  form-control-sm border-0" appearance="fill">
+            <mat-label floatLabel="outline">Destinatario</mat-label>
+            <input matInput [(ngModel)]="referralGuideModel.addressee" name="addressee" placeholder="Destinatario">
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    
+    <button mat-button class="btn btn-outline-secondary" mat-dialog-close>Cancelar</button>
+  
+    <button mat-button class="btn  btn-outline-primary" [mat-dialog-close]="referralGuideModel"
+        cdkFocusInitial>Aceptar</button>
+</mat-dialog-actions>
