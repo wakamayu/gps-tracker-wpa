@@ -14,7 +14,7 @@ spec:
   - host: gps.tracker.wpa
     http:
       paths:
-      - path: /ingress/web/tracker-wpa/
+      - path: /ingress/web/wpa-tracker/
         pathType: Prefix
         backend:
           serviceName: gps-tracker-wpa
