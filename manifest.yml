@@ -53,8 +53,6 @@ spec:
       labels:
         run: gps-tracker-wpa
     spec:
-        imagePullSecrets:
-        - name: regcred
         containers:
         - image: gcr.io/hanan-qucha-grau/gps-tracker-wpa:1
           name: gps-tracker-wpa
